@@ -9,9 +9,10 @@
   <div class="card-body">
     <h5 class="card-title"><%= flat.name %></h5>
     <p class="card-text"> <%= flat.description %></p>
-    <p class="card-text"><small class="text-muted"><ul>
-    <li><i class="fa-solid fa-user-group"></i><%= flat.number_of_guests %></li>
-    <li><i class="fa-solid fa-euro-sign"></i><%= flat.price_per_night %></li>
+    <p class="card-text"><small class="text-muted">
+      <ul class="d-flex justify-start p-0">
+    <li class="d-inline-block"><i class="fa-solid fa-user-group"></i><%= flat.number_of_guests %></li>
+    <li class="d-inline-block"><i class="fa-solid fa-euro-sign"></i><%= flat.price_per_night %></li>
   </ul></small></p>
     <%= link_to "more information", flat_path(flat) %>
   </div>
