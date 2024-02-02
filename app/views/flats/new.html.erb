@@ -1,0 +1,14 @@
+<div class="container">
+<h1>Ajouter votre logement</h1>
+<div class="col-4">
+<%= simple_form_for(@flat) do |f| %>
+<%= f.input :name %>
+<%= f.input :address %>
+<%= f.input :description %>
+<%= f.input :price_per_night %>
+<%= f.input :number_of_guests %>
+<%= f.submit "Valider" %>
+<%= link_to "Annuler", flats_path, class: "btn btn-outline-primary"%>
+<% end %>
+</div>
+</div>

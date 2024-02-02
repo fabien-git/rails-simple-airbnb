@@ -1,0 +1,13 @@
+
+
+<nav class="navbar navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand">Simple Airbnb</a>
+    <%= form_with(url: search_flats_path, method: :get, class: "d-flex") do |f| %>
+      <%= f.text_field :search, placeholder: "Votre recherche", id: "search-input" %>
+      <%= f.submit "Search", id: "search-submit", class: "btn btn-outline-success mx-3" %>
+      <%= link_to "Add Flat", new_flat_path, class: "btn btn-outline-primary" %>
+       <% end %>
+    </form>
+  </div>
+</nav>

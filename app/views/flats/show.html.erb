@@ -1,0 +1,23 @@
+<img id="head">
+<div class="card bg-light p-5 w-50 my-3 mx-5" style="width: 18rem;" >
+  <h2 class="font-weight-bold"><%= @flat.name %></h2>
+ <p><%= @flat.address %></p>
+</div>
+<div class="card bg-light p-5 w-50 my-3 mx-5" style="width: 18rem;">
+  <%= @flat.description %>
+</div>
+<div  class="card bg-light p-5 w-50  my-3 mx-5" style="width: 18rem;">
+    <ul>
+    <li class="d-inline-block"><i class="fa-solid fa-user-group"></i><%= @flat.number_of_guests %></li>
+    <li class="d-inline-block"><i class="fa-solid fa-euro-sign"></i><%= @flat.price_per_night %></li>
+  </ul>
+</div>
+<div class=" w-50  mx-5 text-end">
+<%= link_to "modifier", edit_flat_path(@flat), class:"btn btn-outline-dark" %>
+<%= link_to "Supprimer",
+    flat_path(@flat),
+    class:"btn btn-outline-dark",
+    data: {turbo_method: :delete, turbo_confirmation: "Are you sure?"}
+ %>
+<%= link_to "back", flats_path, class:"btn btn-outline-dark" %>
+</div>

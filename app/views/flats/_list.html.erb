@@ -1,0 +1,25 @@
+
+<div class="container">
+  <div class="row">
+
+<% @flats.each do |flat| %>
+
+<div class="col-md-4 card mb-3" >
+  <img src=<%= flat.image_url %> class="card-img-top"   height="200px" alt="...">
+  <div class="card-body">
+    <h5 class="card-title"><%= flat.name %></h5>
+    <p class="card-text"> <%= flat.description %></p>
+    <p class="card-text"><small class="text-muted"><ul>
+    <li><i class="fa-solid fa-user-group"></i><%= flat.number_of_guests %></li>
+    <li><i class="fa-solid fa-euro-sign"></i><%= flat.price_per_night %></li>
+  </ul></small></p>
+    <%= link_to "more information", flat_path(flat) %>
+  </div>
+</div>
+
+
+
+<% end %>
+
+</div>
+</div>
