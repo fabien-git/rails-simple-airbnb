@@ -4,9 +4,9 @@
 
 <% @flats.each do |flat| %>
 
-<div class="col-md-3 card mb-3 mx-1 p-0" >
+<div class="col-md-4 my-3 border " >
   <img src=<%= flat.image_url %> class="card-img-top">
-  <div class="card-body">
+  <div class="card-body bg-light">
     <h5 class="card-title"><%= flat.name %></h5>
     <p class="card-text"> <%= flat.description %></p>
     <p class="card-text"><small class="text-muted">
