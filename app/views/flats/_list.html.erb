@@ -1,11 +1,11 @@
 
 <div class="container">
-  <div class="row">
+  <div class="row ">
 
 <% @flats.each do |flat| %>
 
-<div class="col-md-4 card mb-3" >
-  <img src=<%= flat.image_url %> class="card-img-top"   height="200px" alt="...">
+<div class="col-md-3 card mb-3 mx-1 p-0" >
+  <img src=<%= flat.image_url %> class="card-img-top">
   <div class="card-body">
     <h5 class="card-title"><%= flat.name %></h5>
     <p class="card-text"> <%= flat.description %></p>
